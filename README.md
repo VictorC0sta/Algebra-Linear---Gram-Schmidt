@@ -57,32 +57,41 @@ O código ainda trata situações importantes como:
 
 <hr>
 
-<h2>✅ Casos de Teste Implementados</h2>
+<h2>✅ Casos de Teste Obrigatórios</h2>
 
 <ol>
   <li>
-    <strong>Matriz 2×2 simples</strong><br>
-    A = [[2, 3], [1, 4]]<br>
-    Resultado:
-    <pre>
-Q =
-  0.8944  -0.4472
-  0.4472   0.8944
-
-R =
-  2.2361   4.4721
-  0        2.2361
-    </pre>
+    <strong>Base já ortonormal</strong><br>
+    A = [[1, 0], [0, 1]]<br>
+    Resultado esperado: Q = A e R = I.<br>
+    O método confirma corretamente.
   </li>
 
   <li>
-    <strong>Matriz com vetores dependentes</strong><br>
-    Detectado status: <code>dependente</code>
+    <strong>Base linearmente independente</strong><br>
+    A = [[1, 1], [1, 0]]<br>
+    Foram comparados os métodos <em>clássico</em> e <em>modificado</em>.<br>
+    Ambos retornaram os mesmos Q e R, indicando boa estabilidade numérica.
   </li>
 
   <li>
-    <strong>Comparação entre Gram-Schmidt clássico e modificado</strong><br>
-    Mostra diferenças numéricas de estabilidade.
+    <strong>Base não ortogonal em 3D</strong><br>
+    A = [[1, 1, 0], [1, 0, 1], [0, 1, 1]]<br>
+    O método modificado produziu uma matriz Q claramente ortonormal e R triangular superior.
+  </li>
+
+  <li>
+    <strong>Base mal-condicionada</strong><br>
+    A = [[1, 1], [1, 1.00001]]<br>
+    O método modificado foi capaz de manter maior estabilidade numérica na construção de Q e R.
+  </li>
+
+  <li>
+    <strong>Base linearmente dependente</strong><br>
+    A = [[1, 2, 3], [2, 4, 6], [3, 6, 9]]<br>
+    O programa detectou corretamente dependência linear:<br>
+    <code>⚠️ Vetor linearmente dependente na coluna 2</code><br>
+    <code>⚠️ Vetor linearmente dependente na coluna 3</code>
   </li>
 </ol>
 
