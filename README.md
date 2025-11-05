@@ -27,9 +27,9 @@ O código ainda trata situações importantes como:
 
 <h2>📂 Estrutura dos Arquivos</h2>
 <ul>
-  <li><strong>gram_schmidt.sci</strong> → Contém a função <code>gram_schmidt(A, modo)</code></li>
-  <li><strong>main_gram.sce</strong> → Script principal com menu e execução dos testes</li>
-  <li><strong>testes.sce</strong> → Conjunto de testes obrigatórios já configurados</li>
+  <li><strong>gram-schmidt.sci</strong> → Contém a função <code>gram_schmidt(A, modo)</code></li>
+  <li><strong>testes.sci</strong> → Conjunto de testes obrigatórios já configurados</li>
+  <li><strong>maingram-schmidt.sce</strong> → Script principal com menu e execução dos testes</li>
 </ul>
 
 <hr>
